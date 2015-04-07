@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:layout_gravity="center">
+    
+    <!-- 这个ImageView是为了定位close按钮 -->
+	<ImageView
+        android:id="@+id/imga_locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/guanggao_kuang" 
+        android:background="@android:color/white"
+        android:paddingTop="20dip"
+        android:paddingRight="20dip"
+        android:visibility="invisible"/>
+	
+    <ImageView
+        android:id="@+id/image_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/guanggao_kuang" />
+    
+    <ImageView
+        android:id="@+id/image_ad_image"
+        android:layout_width="265dip"
+        android:layout_height="240dip"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:scaleType="fitCenter"/>
+    
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/image_ad_loading_layout"
+        android:background="@drawable/kuang_ditu">
+       
+        <com.g.sc.image.MsgProgressBar
+            android:id="@+id/iamge_ad_loading_bar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dip"/>
+         <TextView 
+            android:id="@+id/image_ad_preload_text"
+            android:textColor="@android:color/white"
+            android:gravity="center_horizontal" 
+            android:maxLines="4"
+            android:padding="3dip"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_centerHorizontal="true"
+			android:layout_below="@id/iamge_ad_loading_bar"
+			android:background="@drawable/ad_shape"
+            android:ems="12"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_ad_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guanggao_close"
+        android:layout_alignRight="@+id/imga_locate"
+        android:layout_alignTop="@+id/imga_locate"
+         />
+    
+    <ImageView
+        android:id="@+id/image_ad_tiyan"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/liji_tiyan_btn"
+        android:layout_alignBottom="@+id/imga_locate"
+        android:layout_alignRight="@+id/image_bg"
+        android:layout_marginBottom="15dip"
+        android:layout_marginRight="5dip"/>
+    
+    
+
+</RelativeLayout>
